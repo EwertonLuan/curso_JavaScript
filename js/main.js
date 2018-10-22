@@ -1,8 +1,8 @@
-var list = [
-    {"desc":"mochila","amount":"2","value":"1.56"},
-    {"desc":"lapis","amount":"3","value":"2.56"},
-    {"desc":"caderno","amount":"4","value":"7.56"}
-];
+// var list = [
+//     {"desc":"mochila","amount":"2","value":"1.56"},
+//     {"desc":"lapis","amount":"3","value":"2.56"},
+//     {"desc":"caderno","amount":"4","value":"7.56"}
+// ];
 function getTotal(list){
     var total = 0
     for(var key in list){
@@ -13,9 +13,19 @@ function getTotal(list){
 };
 
 function setList(list){    
-    var table = "<thead><tr><td>Descreption</td><td>Amount</td><td>Value</td><td>Action</td></tr></thead><tbody>";
+    var table = "<thead><tr><td>Descreption</td>"
+    +"<td>Amount</td>"
+    +"<td>Value</td>"
+    +"<td>Action</td>"
+    +"</tr></thead><tbody>";
     for(var key in list){
-        table += '<tr><td>'+formatDesc(list[key].desc)+'</td><td>'+formatAmount(list[key].amount)+'</td><td>'+formatValue(list[key].value)+'</td><td><button onclick="deleteData('+key+');" class="btn btn-default"> Delet</button> <button onclick="setUpdate('+key+');" class="btn btn-default">Edit</button></td></tr>';
+        table += '<tr><td>'+formatDesc(list[key].desc)
+        +'</td><td>'+formatAmount(list[key].amount)
+        +'</td><td>'+formatValue(list[key].value)
+        +'</td><td><button onclick="deleteData('+key+');' 
+        +'"class="btn btn-default"> Delet</button>'
+        +' <button onclick="setUpdate('+key+');'
+        +'" class="btn btn-default">Edit</button></td></tr>';
         };
     table += "</tbody>";
     document.getElementById("listTable").innerHTML = table;

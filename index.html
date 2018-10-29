@@ -24,13 +24,13 @@
                 </div>
                 <span id="btnUpdate" style="display:none;">
                     <span id="inputIDUpdate"></span>
-                    <button onclick="updateData();" class="btn btn-default">Save</button>
-                    <button onclick="resetForm();" class="btn btn-default">Cancel</button>
+                    <button onclick="updateData();" class="btn btn-default" id="save">Save</button>
+                    <button onclick="resetForm();" class="btn btn-default" id="cancel">Cancel</button>
                 </span>
                 <div id="btnAdd" class="form-group">
-                    <button onclick="addData();" class="btn btn-default">Add</button>
-                    <button onclick="resetForm();" class="btn btn-default">Reset</button>
-                    <button onclick="deleteList();" class="btn btn-default">Delete List</button>
+                    <button onclick="addData();" class="btn btn-default" id="add">Add</button>
+                    <button onclick="resetForm();" class="btn btn-default" id="reset">Reset</button>
+                    <button onclick="deleteList();" class="btn btn-default" id="delete_list">Delete List</button>
                 </div>
             </div>
             <div id="erro" style="display: none"></div>

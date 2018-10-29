@@ -1,8 +1,4 @@
-// var list = [
-//     {"desc":"mochila","amount":"2","value":"1.56"},
-//     {"desc":"lapis","amount":"3","value":"2.56"},
-//     {"desc":"caderno","amount":"4","value":"7.56"}
-// ];
+var list = [];
 function getTotal(list){
     var total = 0
     for(var key in list){
@@ -23,9 +19,9 @@ function setList(list){
         +'</td><td>'+formatAmount(list[key].amount)
         +'</td><td>'+formatValue(list[key].value)
         +'</td><td><button onclick="deleteData('+key+');' 
-        +'"class="btn btn-default"> Delet</button>'
+        +'"class="btn btn-default" id="delete"> Delete</button>'
         +' <button onclick="setUpdate('+key+');'
-        +'" class="btn btn-default">Edit</button></td></tr>';
+        +'" class="btn btn-default" id="edit">Edit</button></td></tr>';
         };
     table += "</tbody>";
     document.getElementById("listTable").innerHTML = table;
